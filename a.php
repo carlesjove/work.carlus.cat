@@ -66,9 +66,11 @@ if ( ! class_exists('A') ) {
 			if ( file_exists('data/' . $this->request) ) {
 				include 'data/' . $this->request;
 			}
-			if ( $this->is_item_page() ) {
+			if ( $this->is_item_page() and file_exists($this->as_file( 'data/' . $this->path[0])) ) {
 				include $this->as_file( 'data/' . $this->path[0] );
-				$item = $list[$this->path[1]];
+				if ( isset($list) and isset($list[$this->path[1]]) ) {
+					$item = $list[$this->path[1]];
+				}
 			}
 			include $this->request;
 		}
