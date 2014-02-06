@@ -1,0 +1,79 @@
+html, body, #home {
+	height: 100%;
+}
+
+#home {
+	max-width: 100%;
+	padding-top: 4em;
+	p {
+		max-width: 25rem;
+	}
+}
+.amazing-image-list {
+	top: 3rem;
+	left: 28rem;
+	width: 99999em;
+	li {
+		max-width: 500px;
+		float: left;
+		@include rotate(1);
+		&:first-of-type {
+			figure {
+				figcaption {
+					display: block;
+					position: absolute;
+					top: -2em;
+					left: 30%;
+					&:after {
+						display: block;
+						width: 100px;
+						height: 87px;
+						content: "";
+						background: url(../img/je-ui-sprite.png) 0 -5px no-repeat;
+						position: absolute;
+						top: 1em;
+						left: -120px;
+					}
+				}
+			}
+		}
+		&:nth-child(even) {
+			@include rotate(-1);
+			margin-top: -10px;
+			margin-left: -60px;
+		}
+	}
+}
+
+/* Services */
+#services {
+	max-width: 100%;
+	//background-image: url(../assets/binding_dark.png); 
+	.inner {
+		@include grid-row; @include grid-column(12); float: none;
+	}
+	dl {
+		margin-top: 2em;
+		&> div {
+			@include grid-column(4);
+			padding: 0 1em 0 0;
+		}
+	}
+}
+
+#portfolio {
+	ul { @include block-grid(4);
+		li {
+			a {
+				display: block;
+				background: $links;
+				color: white;
+				padding: 4em 1em;
+				text-align: center;
+			}
+			/*&:nth-child(1) a {
+				background: $links;
+			}*/
+		}
+	}
+}

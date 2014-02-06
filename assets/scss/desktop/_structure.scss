@@ -1,0 +1,46 @@
+#home {
+	max-width: 100%;
+	padding-top: 4em;
+	p {
+		max-width: 30rem;
+	}
+}
+.amazing-image-list {
+	top: 3rem;
+	left: 35rem;
+	width: 99999em;
+	li {
+		max-width: 900px;
+		@include rotate(1);
+		&:first-of-type {
+			figure {
+				figcaption {
+					top: -2em;
+					left: 60%;
+				}
+			}
+		}
+	}
+}
+
+/* Contact */
+#contact {
+	form {
+		@include grid-row; @include grid-column(12);
+		float: none;
+	}
+	h1, p, label { 
+		color: white;
+	}
+	h1 {
+		text-align: center;
+	}
+	input, textarea {
+		border-radius: 5px;
+	}
+	input[type="submit"] {
+		@include button();
+		float: right;
+	}
+}
+// }

@@ -1,0 +1,53 @@
+// Media Queries
+
+$small-screen: 550px;
+$small-to-medium-screen : 760px;
+$medium-screen: 1024px;
+$large-screen: 1400px;
+
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$small-to-medium: "only screen and (min-width: #{$small-to-medium-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+
+
+
+$header-bg: #fff;
+
+// COLORS
+$clr_blauet: #ECF4F9;
+$clr_grisfosc: #4d4d4d;
+$clr_grisclar: #f5f5f5;
+$clr_taronja: #C46C4F;
+$gris-fosc: $clr_grisfosc;
+
+// Aplicacions de colors
+$body-bg: $clr_blauet;
+$text: lighten($clr_grisfosc, 5%);
+$links: $clr_taronja;
+$primary-color: $links;
+
+// FONTS
+$sans: 'Source Sans Pro', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+$serif: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+$english: 'IM Fell English', $serif;
+$hand: 'Bad Script', $sans;
+
+// TYPE
+$normal-font-weight: 200;
+$strong-font-weight: 400;
+$link-font-weight: 400;
+
+
+$body-section-padding: 2em;
+
+// SOME MIXINS
+@mixin rotate($rotate:1) {
+	-webkit-transform: rotate(#{$rotate}deg); 
+	-moz-transform: rotate(#{$rotate}deg); 
+	-o-transform: rotate(#{$rotate}deg); 
+	transform: rotate(#{$rotate}deg);
+}

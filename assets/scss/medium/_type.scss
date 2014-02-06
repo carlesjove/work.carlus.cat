@@ -1,0 +1,5 @@
+body > section {
+	&:not(#home) {
+		p { font-size: 1.2em; }
+	}
+}

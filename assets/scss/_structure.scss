@@ -1,0 +1,212 @@
+body {
+	background: #ecf4f9;
+	padding-top: 3em;
+	&> *:not(footer):not(.site-header):not(#blah-blah),
+	&> footer > div {
+		@include outer-container;
+		padding: 0 1em;
+	}
+}
+
+main > section {
+	padding: 2em 0;
+	h1,
+	.lead {
+		text-align: center;
+	}
+	.lead {
+		margin: 3em 0;
+	}
+}
+
+.site-header {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+	background: $body-bg;
+	&:after {
+		content: "";
+		display: block;
+		width: 200px;
+		height: 1px;
+		margin: 0 auto;
+		border-bottom: 1px solid darken($clr_blauet, 5%);
+	}
+	&.with-shadow {
+		box-shadow: 0 10px 30px -6px darken($clr_blauet, 3%);
+	}
+}
+
+.site-footer {
+	padding: 3em 0 1em;
+}
+
+#home {
+	text-align: center;
+}
+
+.site-footer {
+	background: $clr_taronja;
+	text-align: center;
+}
+
+#motto {
+	padding: 2em 0;
+}
+
+.amazing-image-list {
+	@include outer-container;
+	list-style-type: none;
+	margin: 5rem 0 2rem; 
+	padding-left: 60px;
+	li {
+		width: 50%;
+		background: white;
+		padding: 5px;
+		position: relative;
+		border: 1px solid rgba(0,0,0,.1);
+		box-shadow: 0px 3px 5px rgba(0,0,0,.3);
+		float: left;
+		@include rotate(2);
+		figure {
+			height: auto;
+			border: none;
+			figcaption {
+				display: none;
+			}
+			img {
+				display: block;
+			}
+		}
+		&:nth-child(even) {
+			@include rotate(-1);
+			margin-top: -10px;
+			margin-left: -60px;
+		}
+	}
+}
+
+#services {
+	border-bottom: 1px solid darken($clr_blauet, 5%);
+	box-shadow: 0 10px 5px -6px darken($clr_blauet, 3%), 
+				0 -10px 5px -6px darken($clr_blauet, 3%);
+	dl {
+		padding: 0;
+		margin: 0;
+		dh {
+			display: none;
+		}
+		dt {
+			font-weight: normal; 
+		}
+		dd {
+			padding: 0;
+			margin: 0; 
+		}
+		&> div {
+		  margin-bottom: 2em; 
+		}
+	}
+}
+
+.com-treballo {
+	padding: 2em 1em;
+	text-align: center;
+	&#blah-blah {
+		background: white url(../img/bg_grid.png);
+		color: #4d4d4d; 
+		border: 1px solid darken($clr_blauet, 5%);
+	}
+	img {
+		max-width: 50%; 
+	}
+	section {
+		margin: 3em 0; 
+	}
+}
+
+// #tarifes-integrals,
+// #tarifes-dev
+[id*="tarifes-"] {
+	text-align: center;
+	padding: 4em 0 2em;
+	h1 {
+		margin-bottom: 2em;
+	}
+}
+
+.price-list {
+	list-style: none;
+	padding: 0;
+	&> li {
+		background: white;
+		border-radius: 10px;
+		border: 1px solid darken($clr_grisclar, 5%);
+		margin-bottom: 2em;
+		div {
+			padding: 1rem;
+			border-bottom: 1px solid $clr_grisclar;
+			&.features {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+	header {
+		background: $clr_taronja;
+		color: white;
+		padding: 1em 0;
+		h3 {
+			margin: 0;
+			font-weight: $strong_font_weight;
+			font-size: 1.8em;
+			line-height: 1.5em;
+		}
+	}
+	.features {
+		ul {
+			padding: 0;
+			list-style: none;
+			margin: 0;
+			li {
+				background: $clr_grisclar;
+				margin: 0 -1rem;
+				padding: 1em;
+				border-bottom: 1px solid darken($clr_grisclar, 5%);
+				&:last-child {
+					border: none;
+				}
+			}
+		}
+	}
+	small {
+		line-height: 0;
+		color: darken($primary-color, 10%);
+		//color: rgba(#000, .3);
+	}
+	span.price {
+		color: white;
+		font-weight: $strong-font-weight;
+		font-size: 1.5em;
+		display: block;
+		margin-top: 0;
+		small {
+			font-size: .5em;
+		}
+	}
+}
+
+.tarifa-individual {
+	background: white;
+	padding: 2em;
+	max-width: 50em;
+	margin: 2em auto;
+}
+

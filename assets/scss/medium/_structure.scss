@@ -1,0 +1,66 @@
+#services {
+	dl {
+		@include clearfix;
+		&> div {
+		  @include span-columns(4);
+		  @include omega(3n);
+		}
+	}
+}
+
+.com-treballo {
+	@include span-columns(12);
+	text-align: center;
+	margin-bottom: 5em;
+	header {
+		@include span-columns(12);
+	}
+	section {
+		@include span-columns(4);
+	}
+}
+
+.amazing-image-list {
+	li {
+		&:first-of-type {
+			figure {
+				figcaption {
+					display: block;
+					position: absolute;
+					top: -2em;
+					left: 60%;
+					&:after {
+						display: block;
+						width: 100px;
+						height: 87px;
+						content: "";
+						background: url(../img/je-ui-sprite.png) 0 -5px no-repeat;
+						position: absolute;
+						top: 1em;
+						left: -120px;
+					}
+				}
+			}
+		}
+		&:nth-child(even) {
+		}
+	}
+}
+
+.price-list {
+	@include outer-container;
+	&> li {
+		@include span-columns(3);
+		// &:nth-child(3) {
+		// 	transform: scale(1.1);
+		// }
+	}
+}
+
+#tarifes-dev {
+	.price-list {
+		&> li:first-child {
+			@include shift(3);
+		}
+	}
+}
